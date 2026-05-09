@@ -23,7 +23,7 @@ The system was built to address a specific gap: most financial RAG demos read PD
 
 ## Architecture
 
-> Architecture diagram coming soon. See `Financial RAG System Guide` for the high-level data flow across ingestion, retrieval, and signal layers.
+![Financial RAG System Guide](assets/System_Guide.png)
 
 The system runs as 8 Docker services: FastAPI backend, three ARQ workers, React frontend, PostgreSQL, Redis, and ChromaDB. The ingestion pipeline is a 9-step process executed asynchronously per filing:
 
@@ -108,6 +108,8 @@ A per-company filing coverage matrix tracking healthy / warning / failed flags. 
 ---
 
 ## Signal Types
+
+![Signal Extraction Guide](assets/Signals.jpg)
 
 | Signal | Range | Source | Cost | Description |
 |--------|-------|--------|------|-------------|
